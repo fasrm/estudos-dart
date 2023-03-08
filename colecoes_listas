@@ -1,0 +1,66 @@
+/*
+ * Collection ou coleções -> são implementações de
+ * estruturas de dados, que é utilizado para armazenar
+ * itens.
+ * - List
+ * - Maps
+ * */
+
+class Usuario
+{
+  String nome="";
+  int idade=0;
+  
+  Usuario(this.nome, this.idade);
+}
+
+void main()
+{
+  var lista = ["Morango", "Manga"];
+  print(lista);
+  
+  List lista2 = ["Abacate", "Laranja"];
+  print(lista2);
+  
+  List<String> frutas = ["Pêra","Pêssego"];
+  print(frutas);
+  
+  List<int> numeros = [1, 5, 10];
+  print(numeros);
+  
+  List diversos = ["Franciny", "Patty", 1, 3, 3.33];
+  print(diversos);
+  
+  frutas.add("Melancia");
+  print(frutas);
+  
+  frutas.insert(0, "Abacaxi");
+  print(frutas);
+  
+  frutas.insert(1, "Abacaxi");
+  print(frutas);
+  
+  frutas.removeAt(0);
+  print(frutas);
+  
+  print(frutas.contains("Melancia"));
+  
+  // Mostra a quantidade de itens na lista
+  print(frutas.length);
+  
+  // Armazenar objetos
+  //Usuario usuario = Usuario("Franciny", 39);
+  
+  // Instanciando um objeto do tipo List
+  List<Usuario> usuarios = []; 
+  usuarios.add(Usuario("Franciny", 39));
+  usuarios.add(Usuario("Patty", 29));
+  usuarios.add(Usuario("Andres", 7));
+  
+  for(Usuario usuario in usuarios){
+    print("Nome: ${usuario.nome}, idade: ${usuario.idade}");
+  }
+  
+  //print(usuarios);
+  
+}
